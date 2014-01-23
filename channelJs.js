@@ -50,7 +50,7 @@ $("#qualitywrap").append("<div class='btn-group' id='btnBgCaret'><a class='btn b
 $("#btnBgCaret").append("<ul class='dropdown-menu right' id='caretDropdown'></ul>");
 $.each(backgrounds, function (i) {
     "use strict";
-    $("#btnBgCaret ul").append("<li><a href='javascript:void(0)'>" + backgrounds[i][1] + "</a></li");
+    $("#btnBgCaret ul").append("<li><a href='javascript:void(0)'>" + backgrounds[i].info + "</a></li");
 });
 
 //Check if darkstrap/altdark is used, if so load fordark.css/foraltdark.css

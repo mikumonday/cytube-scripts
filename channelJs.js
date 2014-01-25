@@ -10,7 +10,7 @@ var banners = [
         {link: "", info: ""}
     ],
     backgrounds = [
-        {link: "", title: ""}
+        {link: "", info: ""}
     ];
 
 //Sets ApiMiku, Yukari color

@@ -44,13 +44,13 @@ $.each(spriteIds, function (i) {
 $("#qualitywrap").append("<button class='btn btn-small' id = 'btnChangeBg'>Change background</button>");
 
 //Adds caret button
-$("#qualitywrap").append("<div class='btn-group' id='btnBgCaret'><a class='btn btn-small dropdown-toggle' data-toggle='dropdown' href='javascript:void(0)'><b class='caret'></b></a></div>");
+$("#qualitywrap").append("<div class='btn-group' id='btnBgCaret'><a class='btn btn-small' data-toggle='dropdown' href='javascript:void(0)'><b class='caret'></b></a></div>");
 
 //Creates dropdown list
 $("#btnBgCaret").append("<ul class='dropdown-menu right' id='caretDropdown'></ul>");
 $.each(backgrounds, function (i) {
     "use strict";
-    $("#btnBgCaret ul").append("<li><a href='javascript:void(0)'>" + backgrounds[i].info + "</a></li");
+    $("#btnBgCaret ul").append("<li><a href='javascript:void(0)'>" + backgrounds[i].info + "</a></li>");
 });
 
 //Check if darkstrap/altdark is used, if so load fordark.css/foraltdark.css

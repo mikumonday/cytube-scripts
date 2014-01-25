@@ -13,7 +13,7 @@ var banners = [
         {link: "", info: ""}
     ];
 
-//Sets ApiMiku, Yukari color
+//Sets Rin, Yukari color
 $("span.userlist_op:contains('Rin')").css("cssText", "color: Goldenrod !important;");
 $("span.userlist_owner:contains('Yukari')").css("cssText", "color: #b600f9 !important;");
 

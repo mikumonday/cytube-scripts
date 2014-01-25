@@ -19,10 +19,6 @@ $("span.userlist_owner:contains('Yukari')").css("cssText", "color: #b600f9 !impo
 
 //Sets favicon
 $("<link id='favicon' type='image/x-icon' rel='shortcut icon' href='http://i.imgur.com/OzAC4l0.png' />").appendTo("head");
-//Rin anniversary
-//$("<link id='favicon' type='image/x-icon' rel='shortcut icon' href='http://i.imgur.com/oJhN7M5.png' />").appendTo("head");
-
-//$("span.userlist_owner:contains('Rin')").append("<img src='http://i.imgur.com/mpONT5H.png'>");
 
 //Adds banner
 var randomBanner = Math.floor(Math.random() * banners.length);

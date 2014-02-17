@@ -43,3 +43,18 @@ socket.on("chatMsg", colorbot);
 // $("#rightpane-inner").prepend('<div id="vdbcontrol" class="plcontrol-collapse col-lg-12 col-md-12 collapse"\
     // style="height: auto;"><div class="vertical-spacer"></div><div class="input-group">\
   // <div id="vdbslot"></div></div></div>');
+
+var randPic = function() {
+  var numb = Math.floor(Math.random() * pictures.length);
+  return numb;
+};
+var pictures = [
+  {'link': 'url goes here'}
+]; 
+
+$('#leftpane').append("<img id='pictureShow' width=100% src=" + pictures[randPic()].link + ">");
+
+$('#pictureShow').click(function() {
+  $(this).attr("src", (pictures[randPic()].link));
+});
+

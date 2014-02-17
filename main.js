@@ -24,16 +24,28 @@ function colorbot() {
 socket.on("chatMsg", colorbot);
 
 //random picture show
-var randPic = function() {
+var randPic = function () {
   var numb = Math.floor(Math.random() * pictures.length);
   return numb;
-};
+}
 var pictures = [
-  {'link': 'url goes here'}
+  {'link': 'https://dl.dropboxusercontent.com/u/65223300/1390864356116.jpg'},
+  {'link': 'https://dl.dropboxusercontent.com/u/65223300/amx-109.jpg'},
+  {'link': 'https://dl.dropboxusercontent.com/u/65223300/hamburger.png'},
+  {'link': 'https://dl.dropboxusercontent.com/u/65223300/nyanpasu.JPG'}
 ]; 
 
-$('#leftpane').append("<img id='pictureShow' width=100% src=" + pictures[randPic()].link + ">");
-$('#pictureShow').click(function() {
-  $(this).attr("src", (pictures[randPic()].link));
+$('#leftpane').append("<div id='pictureShow' class='viewport'><div id='holder' class='aa'>" + 
+                      "<span id='pictureText' class='dark-background'>Click for something different!" + 
+                      "</span><img id='picture' src='" + pictures[randPic()].link + "'></div></div>");
+$('#pictureShow').mouseenter(function () {
+  $('#picture').animate({height: '299', left: '0', top: '0', width: '450'}, 100);
+  $('#pictureText').fadeIn(200);
 });
-
+$('#pictureShow').mouseleave(function () {
+  $('#picture').animate({height: '332', left: '-20', top: '-20', width: '500'}, 100);
+  $('#pictureText').fadeOut(200);
+});
+$('#pictureShow').click(function () {
+  $('#picture').attr('src', pictures[randPic()].link);
+});

@@ -1,6 +1,13 @@
 /*global $, jQuery, socket*/
 /*jslint maxlen: 120 */
 
+var pictures = [
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumiku.jpg'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumi2.jpg'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/powapowa.jpg'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/rin1.jpg'}
+]; 
+
 ////Set Bot color
 $("span.userlist_owner:contains('Teto')").css("cssText", "color: Pink !important;");
 $("span.userlist_owner:contains('Yukari')").css("cssText", "color: #b600f9 !important;");
@@ -24,16 +31,10 @@ function colorbot() {
 socket.on("chatMsg", colorbot);
 
 //random picture show
-var randPic = function () {
+ function randPic() {
   var numb = Math.floor(Math.random() * pictures.length);
   return numb;
 }
-var pictures = [
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumiku.jpg'},
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumi2.jpg'},
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/powapowa.jpg'},
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/rin1.jpg'}
-]; 
 
 $('#leftpane-inner').append("<div id='pictureShow' class='viewport'><div id='holder' " + 
                             "class='aa'><span id='pictureText' class='dark-background'>" + 

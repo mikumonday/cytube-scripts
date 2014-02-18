@@ -55,14 +55,15 @@ to dark, before required refresh. */
 
 /* --- Container configuration ---------------------------------------------------------- */
 .viewport {
-    border: 3px solid #eee;
     float: left;
-    height: 418px;
+    height: 523px;
     margin: 0px 14px 0px 14px;
     overflow: hidden;
     position: relative;
     width: 458px;
     cursor: pointer;
+    border-radius: 3px;
+    border: 1px solid #aaa;
 }
 
 /* This is so that the 2nd thumbnail in each row fits snugly. You will want to add a similar
@@ -78,7 +79,7 @@ to dark, before required refresh. */
 }
 
 .viewport .aa img {
-    height: 418px;
+    height: 523px;
     position: relative;
     width: 458px;
 }

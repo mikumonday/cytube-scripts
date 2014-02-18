@@ -39,11 +39,11 @@ $('#leftpane-inner').append("<div id='pictureShow' class='viewport'><div id='hol
                             "class='aa'><span id='pictureText' class='dark-background'>" + 
                             "Click for something different!</span><img id='picture' src='" + pictures[randPic()].link + "'></div></div>");
 $('#pictureShow').mouseenter(function () {
-  $('#picture').animate({height: '420', left: '0', top: '0', width: '458'}, 100);
+  $('#picture').animate({height: '440', left: '0', top: '0', width: '478'}, 100);
   $('#pictureText').fadeIn(200);
 });
 $('#pictureShow').mouseleave(function () {
-  $('#picture').animate({height: '440', left: '-20', top: '-20', width: '478'}, 100);
+  $('#picture').animate({height: '420', left: '-20', top: '-20', width: '458'}, 100);
   $('#pictureText').fadeOut(200);
 });
 $('#pictureShow').click(function () {

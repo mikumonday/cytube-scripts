@@ -45,6 +45,11 @@ to dark, before required refresh. */
     color: black;
 }
 
+#bottom-info {
+    text-align: center;
+    margin-top: 14px;
+}
+
 /* pictureShow region */
 /*from: http://mattbango.com/notebook/code/hover-zoom-effect-with-jquery-and-css*/
 

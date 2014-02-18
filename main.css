@@ -1,11 +1,25 @@
-/* copy paste for pictureShow */
+/* Main Style region */
+
+body {
+    background-color: LightSeaGreen;
+}
+
+a {
+    color: LightSeaGreen;
+}
+
+.well {
+    background-color: white;
+}
+
+/* pictureShow region */
 /*from: http://mattbango.com/notebook/code/hover-zoom-effect-with-jquery-and-css*/
 
 /* --- Container configuration ---------------------------------------------------------- */
 .viewport {
     border: 3px solid #eee;
     float: left;
-    height: 420px;
+    height: 418px;
     margin: 0px 14px 0px 14px;
     overflow: hidden;
     position: relative;
@@ -26,11 +40,9 @@
 }
 
 .viewport .aa img {
-    height: 440px;
-    left: -20px;
+    height: 418px;
     position: relative;
-    top: -20px;
-    width: 478px;
+    width: 458px;
 }
 
 /* --- Label configuration -------------------------------------------------------------- */

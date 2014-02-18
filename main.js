@@ -29,21 +29,21 @@ var randPic = function () {
   return numb;
 }
 var pictures = [
-  {'link': 'https://dl.dropboxusercontent.com/u/65223300/mmPictureSHow/gumi1.jpg'},
-  {'link': 'https://dl.dropboxusercontent.com/u/65223300/mmPictureSHow/gumiIA.jpg'},
-  {'link': 'https://dl.dropboxusercontent.com/u/65223300/mmPictureSHow/miku1.jpg'},
-  {'link': 'https://dl.dropboxusercontent.com/u/65223300/mmPictureSHow/dayo1.jpg'}
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumiku.jpg'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumi2.jpg'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/powapowa.jpg'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/rin1.jpg'}
 ]; 
 
 $('#leftpane-inner').append("<div id='pictureShow' class='viewport'><div id='holder' " + 
                             "class='aa'><span id='pictureText' class='dark-background'>" + 
                             "Click for something different!</span><img id='picture' src='" + pictures[randPic()].link + "'></div></div>");
 $('#pictureShow').mouseenter(function () {
-  $('#picture').animate({height: '440', left: '0', top: '0', width: '478'}, 100);
+  $('#picture').animate({height: '438', left: '-10', top: '-9', width: '478'}, 100);
   $('#pictureText').fadeIn(200);
 });
 $('#pictureShow').mouseleave(function () {
-  $('#picture').animate({height: '420', left: '-20', top: '-20', width: '458'}, 100);
+  $('#picture').animate({height: '418', left: '0', top: '0', width: '458'}, 100);
   $('#pictureText').fadeOut(200);
 });
 $('#pictureShow').click(function () {

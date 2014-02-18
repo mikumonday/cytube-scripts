@@ -10,6 +10,7 @@
     overflow: hidden;
     position: relative;
     width: 458px;
+    cursor: pointer;
 }
 
 /* This is so that the 2nd thumbnail in each row fits snugly. You will want to add a similar
@@ -42,6 +43,9 @@
     position: absolute;
     text-align: center;
     text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
     width: 100%;
     z-index: 100;
 }

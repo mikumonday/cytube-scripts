@@ -2,6 +2,7 @@
 
 body {
     background-color: LightSeaGreen;
+    background: url(http://twirlie.net/dd/cytube/v3/pictures/stripes.png) LightSeaGreen repeat-y fixed;
 }
 
 a {

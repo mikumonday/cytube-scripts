@@ -2,13 +2,13 @@
 /*jslint maxlen: 120 */
 
 var pictures = [
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumi%201.jpg'},
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumi2.jpg'},
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumiku.jpg'},
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/rin1.jpg'},
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/lapis.jpg'},
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumiIA.jpg'},
-  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/yufu.jpg'}
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumi%201.jpg', 'info': 'Gumi 1'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumi2.jpg', 'info': 'Gumi 2'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumiku.jpg', 'info': 'Gumiku'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/rin1.jpg', 'info': 'Rin 1'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/lapis.jpg', 'info': 'Lapis'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumiIA.jpg', 'info': 'GumiIA'},
+  {'link': 'http://twirlie.net/dd/cytube/v3/pictures/yufu.jpg', 'info': 'Yufu'}
 ]; 
 
 ////Set Bot color
@@ -52,6 +52,25 @@ $('#pictureShow').mouseleave(function () {
 });
 $('#pictureShow').click(function () {
   $('#picture').attr('src', pictures[randPic()].link);
+});
+
+//adds a button to change the pictureShow
+
+$('#leftcontrols').append(
+  "<div class='btn btn-sm btn-default' id='pictureChange'><a class=''" + 
+  " data-toggle='dropdown' href='javascript:void(0)'>Choose Picture</a></div>"
+);
+
+$("#pictureChange").append("<ul class='dropdown-menu right' id='pictureDropdown'></ul>");
+$.each(pictures, function (i) {
+    "use strict";
+    $("#pictureChange ul").append("<li><a href='javascript:void(0)'>" + pictures[i].info + "</a></li>");
+});
+
+$("#pictureDropdown li").click(function () {
+    "use strict";
+    var picIndex = ($(this).index());
+    $('#picture').attr('src', pictures[picIndex].link);
 });
 
 //add a bottom info field

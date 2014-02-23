@@ -57,8 +57,10 @@ $('#pictureShow').click(function () {
 //adds a button to change the pictureShow
 
 $('#leftcontrols').append(
-  "<div class='btn btn-sm btn-default' id='pictureChange'><a class=''" + 
+  "<div class='dropdown' id='pictureChange'><a class='btn btn-sm btn-default'" + 
   " data-toggle='dropdown' href='javascript:void(0)'>Choose Picture</a></div>"
+  // '<button class="btn btn-sm btn-default" data-toggle="dropdown" data' + 
+  // '-target="#pictureDropdown">Dropdown</button>'
 );
 
 $("#pictureChange").append("<ul class='dropdown-menu right' id='pictureDropdown'></ul>");

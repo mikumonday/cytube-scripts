@@ -9,7 +9,9 @@ var pictures = [
   {'link': 'http://twirlie.net/dd/cytube/v3/pictures/lapis.jpg', 'info': 'Lapis'},
   {'link': 'http://twirlie.net/dd/cytube/v3/pictures/gumiIA.jpg', 'info': 'GumiIA'},
   {'link': 'http://twirlie.net/dd/cytube/v3/pictures/yufu.jpg', 'info': 'Yufu'}
-]; 
+];
+//probably don't need this
+var lastPic = randPic();
 
 ////Set Bot color
 $("span.userlist_owner:contains('Teto')").css("cssText", "color: Pink !important;");
@@ -34,11 +36,21 @@ function colorbot() {
 socket.on("chatMsg", colorbot);
 
 //random picture show
+
+//also probably don't need these
  function randPic() {
   var numb = Math.floor(Math.random() * pictures.length);
   return numb;
 }
-
+function checkPic(a) {
+  var newPic = randPic();
+  if(newPic !== a) {
+    $('#picture').attr('src', pictures[newPic].link);
+    lastPic = newPic;
+  } else {
+    checkPic(a);
+  }
+}
 $('#leftpane-inner').append("<div id='pictureShow' class='viewport'><div id='holder' " + 
                             "class='aa'><span id='pictureText' class='dark-background'>" + 
                             "Click for something different!</span><img id='picture' src='" + pictures[randPic()].link + "'></div></div>");
@@ -51,7 +63,14 @@ $('#pictureShow').mouseleave(function () {
   $('#pictureText').fadeOut(100);
 });
 $('#pictureShow').click(function () {
-  $('#picture').attr('src', pictures[randPic()].link);
+  //probably don't need this. see below
+  checkPic(lastPic);
+  // ***this didn't work but I'll leave it it here just in case***
+  // var num = Math.floor(Math.random() * pictures.length);
+  // while ($('#picture').attr('src') === pictures[num].link) {
+  //   num = Math.floor(Math.random() * pictures.length);
+  // }
+  // $('#picture').attr('src', pictures[num].link);
 });
 
 //adds a button to change the pictureShow
@@ -59,8 +78,6 @@ $('#pictureShow').click(function () {
 $('#leftcontrols').append(
   "<div class='dropdown' id='pictureChange'><a class='btn btn-sm btn-default'" + 
   " data-toggle='dropdown' href='javascript:void(0)'>Choose Picture</a></div>"
-  // '<button class="btn btn-sm btn-default" data-toggle="dropdown" data' + 
-  // '-target="#pictureDropdown">Dropdown</button>'
 );
 
 $("#pictureChange").append("<ul class='dropdown-menu right' id='pictureDropdown'></ul>");

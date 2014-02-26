@@ -35,6 +35,10 @@ function colorbot() {
 }
 socket.on("chatMsg", colorbot);
 
+//make a well for the playlist controls
+
+$('.plcontrol-collapse').addClass('well');
+
 //random picture show
 
 //also probably don't need these

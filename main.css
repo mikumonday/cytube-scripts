@@ -13,6 +13,12 @@ a {
     background-color: white;
 }
 
+.plcontrol-collapse {
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 96%;
+}
+
 #pictureChange {
     padding: 0px 0px 5px 0px;
     width: 25%;

@@ -19,11 +19,6 @@ a {
     width: 96%;
 }
 
-#pictureChange {
-    padding: 0px 0px 0px 0px;
-    width: 25%;
-    float: left;
-}
 
 /* !important so mod colors don't show when changing theme
 to dark, before required refresh. */
@@ -62,74 +57,3 @@ to dark, before required refresh. */
     text-align: center;
     margin-top: 14px;
 }
-
-/* pictureShow region */
-/*from: http://mattbango.com/notebook/code/hover-zoom-effect-with-jquery-and-css*/
-
-/* --- Container configuration ---------------------------------------------------------- */
-.viewport {
-    float: left;
-    height: 523px;
-    margin: 10px 14px 0px 14px;
-    overflow: hidden;
-    position: relative;
-    width: 458px;
-    cursor: pointer;
-    border-radius: 3px;
-    border: 1px solid #aaa;
-}
-
-/* This is so that the 2nd thumbnail in each row fits snugly. You will want to add a similar
-   class to the last thumbnail in each row to get rid of the margin-right. */
-.no-margin {
-    margin-right: 0;
-}
-
-/* --- Link configuration that contains the image and label ----------------------------- */
-.viewport .aa {
-    display: block;
-    position: relative;
-}
-
-.viewport .aa img {
-    height: 523px;
-    position: relative;
-    width: 458px;
-}
-
-/* --- Label configuration -------------------------------------------------------------- */
-.viewport .aa span {
-    display: none;
-    font-size: 3.0em;
-    font-weight: bold;
-    height: 100%;
-    padding-top: 120px;
-    position: absolute;
-    text-align: center;
-    text-decoration: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    width: 100%;
-    z-index: 100;
-}
-    .viewport .aa span em {
-        display: block;
-        font-size: 0.45em;
-        font-weight: normal;
-    }
-
-/* --- Dark hover background ------------------------------------------------------------ */
-.dark-background {
-    background-color: rgba(15, 15, 15, 0.6);
-    color: #fff;
-    text-shadow: #000 0px 0px 20px;
-}
-    .dark-background em {
-        color: #ccc;
-    }
-
-/**
- * You could create multiple hover background classes for different looks depending on the
- * image type. Use your imagination!
- */

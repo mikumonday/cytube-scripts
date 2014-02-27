@@ -20,7 +20,7 @@ a {
 }
 
 #pictureChange {
-    padding: 0px 0px 5px 0px;
+    padding: 0px 0px 0px 0px;
     width: 25%;
     float: left;
 }
@@ -70,7 +70,7 @@ to dark, before required refresh. */
 .viewport {
     float: left;
     height: 523px;
-    margin: 0px 14px 0px 14px;
+    margin: 10px 14px 0px 14px;
     overflow: hidden;
     position: relative;
     width: 458px;

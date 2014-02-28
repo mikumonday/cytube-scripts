@@ -1,24 +1,19 @@
 /* Main Style region */
 
-body {
-    background-color: LightSeaGreen;
-    background: url(http://twirlie.net/dd/cytube/v3/pictures/stripes.png) LightSeaGreen repeat-y fixed;
-}
-
-a {
-    color: LightSeaGreen;
-}
-
-.well {
-    background-color: white;
-}
-
 .plcontrol-collapse {
     margin-right: 15px;
     margin-left: 15px;
     width: 96%;
 }
 
+#bottom-info {
+    text-align: center;
+    margin-top: 14px;
+}
+
+#motd {
+    text-align: center;
+}
 
 /* !important so mod colors don't show when changing theme
 to dark, before required refresh. */
@@ -51,9 +46,4 @@ to dark, before required refresh. */
 .profile-box {
     max-width: 162px;
     color: black;
-}
-
-#bottom-info {
-    text-align: center;
-    margin-top: 14px;
 }

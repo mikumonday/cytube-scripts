@@ -48,6 +48,26 @@ to dark, before required refresh. */
     color: black;
 }
 
+/* MOTD styles */
+
+#iachan {
+float:right;
+position:absolute;
+right:100px;
+}
+.title {
+font-size: 270%;
+}
+.links_main {
+font-size: 170%;
+}
+.bold {
+font-weight: bold;
+}
+.green {
+color: SeaGreen;
+}
+
 /*Emoticon Sprites*/
 .spritesheet{ background:url(http://i.imgur.com/pWWe4gh.png); }
 

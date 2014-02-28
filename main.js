@@ -1,6 +1,9 @@
 /*global $, jQuery, socket*/
 /*jslint maxlen: 120 */
 
+//non temp
+$(".add-temp").attr('checked', false);
+
 ////Set Bot color
 $("span.userlist_owner:contains('Teto')").css("cssText", "color: Pink !important;");
 $("span.userlist_owner:contains('Yukari')").css("cssText", "color: #b600f9 !important;");
@@ -22,6 +25,12 @@ function colorbot() {
         .css("cssText", "color: #b600f9 !important;");
 }
 socket.on("chatMsg", colorbot);
+
+// custom themeing
+
+$('#us-theme').append('<option value="https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css">Miku Monday</option>');
+
+
 
 //make a well for the playlist controls
 

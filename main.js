@@ -1,6 +1,9 @@
 /*global $, jQuery, socket*/
 /*jslint maxlen: 120 */
 
+//non temp
+$(".add-temp").attr('checked', false);
+
 ////Set Bot color
 $("span.userlist_owner:contains('Teto')").css("cssText", "color: Pink !important;");
 $("span.userlist_owner:contains('Yukari')").css("cssText", "color: #b600f9 !important;");

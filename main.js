@@ -3,9 +3,7 @@
 
 var themes = [
   {'link': 'https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css', 'name': 'Miku Monday'},
-  {'link': 'https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css', 'name': 'Miku Monday2'},
-  {'link': 'https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css', 'name': 'Miku Monday3'},
-  {'link': 'https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css', 'name': 'Miku Monday4'}
+  {'link': 'https://dl.dropbox.com/s/el8wwyfpmugzfkk/teto.css', 'name': 'Teto'}
 ];
 
 

@@ -1,6 +1,14 @@
 /*global $, jQuery, socket*/
 /*jslint maxlen: 120 */
 
+var themes = [
+  {'link': 'https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css', 'name': 'Miku Monday'},
+  {'link': 'https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css', 'name': 'Miku Monday2'},
+  {'link': 'https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css', 'name': 'Miku Monday3'},
+  {'link': 'https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css', 'name': 'Miku Monday4'}
+];
+
+
 //non temp
 $(".add-temp").attr('checked', false);
 
@@ -28,9 +36,9 @@ socket.on("chatMsg", colorbot);
 
 // custom themeing
 
-$('#us-theme').append('<option value="https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css">Miku Monday</option>');
-
-
+for(i=0; i<themes.length; i++) {
+  $('#us-theme').append('<option value="' + themes[i].link + '">' + themes[i].name + '</option>');
+}
 
 //make a well for the playlist controls
 

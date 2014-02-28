@@ -7,11 +7,11 @@ $("span.userlist_owner:contains('Yukari')").css("cssText", "color: #b600f9 !impo
 
 //Sets favicon
 //Miku
-//$("<link id='favicon' type='image/x-icon' rel='shortcut icon' href='http://i.imgur.com/OzAC4l0.png' />")
-//.appendTo("head");
+$("<link id='favicon' type='image/x-icon' rel='shortcut icon' href='http://i.imgur.com/OzAC4l0.png' />")
+.appendTo("head");
 //Teto(bread)
-$("<link id='favicon' type='image/x-icon' rel='shortcut icon' href='http://i.imgur.com/5yaKt1u.png' />")
-    .appendTo("head");
+// $("<link id='favicon' type='image/x-icon' rel='shortcut icon' href='http://i.imgur.com/5yaKt1u.png' />")
+//     .appendTo("head");
 
 //re-apply Yukari color every chat message
 function colorbot() {

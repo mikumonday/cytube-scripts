@@ -2,8 +2,8 @@
 /*jslint maxlen: 120 */
 
 var themes = [
-  {'link': 'https://dl.dropbox.com/s/brhim8b5bw1hokn/mikumonday.css', 'name': 'Miku Monday'},
-  {'link': 'https://dl.dropbox.com/s/el8wwyfpmugzfkk/teto.css', 'name': 'Teto'}
+  {'link': 'http://twirlie.net/themes/mikumonday.css', 'name': 'Miku Monday'},
+  {'link': 'http://twirlie.net/themes/teto.css', 'name': 'Teto'}
 ];
 
 
@@ -41,7 +41,7 @@ for(i=0; i<themes.length; i++) {
 //ninja mods
 
 if($('#usertheme').attr('href') === '/css/themes/light.css' || $('#usertheme').attr('href') === '/css/themes/bootstrap.css' || $('#usertheme').attr('href') === '/css/themes/slate.css' || $('#usertheme').attr('href') === '/css/themes/cyborg.css') {
-  $("<link/>", {rel: "stylesheet", href: "https://dl.dropbox.com/s/jw5j5w6jgp7gw9l/userlist.css"}).appendTo($("head"));
+  $("<link/>", {rel: "stylesheet", href: "http://twirlie.net/themes/userlist.css"}).appendTo($("head"));
 }
 
 //make a well for the playlist controls

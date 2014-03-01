@@ -38,6 +38,12 @@ for(i=0; i<themes.length; i++) {
   $('#us-theme').append('<option value="' + themes[i].link + '">' + themes[i].name + '</option>');
 }
 
+//ninja mods
+
+if($('#usertheme').attr('href') === '/css/themes/light.css' || $('#usertheme').attr('href') === '/css/themes/bootstrap.css' || $('#usertheme').attr('href') === '/css/themes/slate.css' || $('#usertheme').attr('href') === '/css/themes/cyborg.css') {
+  $("<link/>", {rel: "stylesheet", href: "https://dl.dropbox.com/s/jw5j5w6jgp7gw9l/userlist.css"}).appendTo($("head"));
+}
+
 //make a well for the playlist controls
 
 $('.plcontrol-collapse').addClass('well');

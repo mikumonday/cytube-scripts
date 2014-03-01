@@ -1,5 +1,5 @@
 body {
-    background: url(http://twirlie.net/dd/cytube/v3/pictures/stripes.png) LightPink repeat-y fixed;
+    background: url(https://dl.dropboxusercontent.com/u/65223300/mmPictureSHow/tetostripes.png) LightPink repeat-y fixed;
 }
 
 a {
@@ -32,4 +32,19 @@ footer {
 
 .well {
   background-color: white;
+}
+
+.userlist_owner {
+    color: Pink !important;
+    font-weight:normal !important;
+}
+
+.userlist_op {
+    color: Pink !important;
+    font-weight:normal !important;
+}
+
+.userlist_item {
+    color: Pink !important;
+    font-weight:normal;
 }

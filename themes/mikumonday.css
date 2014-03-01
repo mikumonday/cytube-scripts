@@ -1,6 +1,6 @@
 body {
     background-color: LightSeaGreen;
-    background: url(http://twirlie.net/dd/cytube/v3/pictures/stripes.png) LightSeaGreen repeat-y fixed;
+    background: url(https://dl.dropboxusercontent.com/u/65223300/mmPictureSHow/mikustripes.png) LightSeaGreen repeat-y fixed;
 }
 
 a {
@@ -33,4 +33,19 @@ footer {
 
 .well {
   background-color: white;
+}
+
+.userlist_owner {
+    color: SeaGreen !important;
+    font-weight:normal !important;
+}
+
+.userlist_op {
+    color: SeaGreen !important;
+    font-weight:normal !important;
+}
+
+.userlist_item {
+    color:SeaGreen !important;
+    font-weight:normal;
 }

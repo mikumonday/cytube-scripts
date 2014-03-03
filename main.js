@@ -40,8 +40,14 @@ for(i=0; i<themes.length; i++) {
 
 //ninja mods
 
-if($('#usertheme').attr('href') === '/css/themes/light.css' || $('#usertheme').attr('href') === '/css/themes/bootstrap.css' || $('#usertheme').attr('href') === '/css/themes/slate.css' || $('#usertheme').attr('href') === '/css/themes/cyborg.css') {
-  $("<link/>", {rel: "stylesheet", href: "http://twirlie.net/dd/cytube/current/themes/userlist.css"}).appendTo($("head"));
+if($('#usertheme').attr('href') === '/css/themes/light.css' ||
+  $('#usertheme').attr('href') === '/css/themes/bootstrap-theme.min.css'){
+    $("<link/>", {rel: "stylesheet", href: "http://twirlie.net/dd/cytube/current/themes/light-bootstrap.css"})
+      .appendTo($("head"));
+} else if ($('#usertheme').attr('href') === '/css/themes/slate.css' ||
+  $('#usertheme').attr('href') === '/css/themes/cyborg.css') {
+    $("<link/>", {rel: "stylesheet", href: "http://twirlie.net/dd/cytube/current/themes/userlist.css"})
+	  .appendTo($("head"));
 }
 
 //make a well for the playlist controls
@@ -64,3 +70,4 @@ $('#resizewrap').append(
 "thub.com/mikumonday/cytube-scripts' target='_blank'>github</a></span></div></div>"
 //lel huge string xdxdxdxdxd
 );
+

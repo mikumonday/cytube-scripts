@@ -1,6 +1,15 @@
 /*global $, jQuery, socket*/
 /*jslint maxlen: 120 */
 
+<<<<<<< HEAD
+=======
+var themes = [
+  {'link': 'http://twirlie.net/dd/cytube/current/themes/mikumonday.css', 'name': 'Miku Monday'},
+  {'link': 'http://twirlie.net/dd/cytube/current/themes/teto.css', 'name': 'Teto'}
+];
+
+
+>>>>>>> fc963f1302fcb9c15e650414a456e728e0793845
 //non temp
 $(".add-temp").attr('checked', false);
 
@@ -26,6 +35,24 @@ function colorbot() {
 }
 socket.on("chatMsg", colorbot);
 
+// custom themeing
+
+for(i=0; i<themes.length; i++) {
+  $('#us-theme').append('<option value="' + themes[i].link + '">' + themes[i].name + '</option>');
+}
+
+//ninja mods
+
+if($('#usertheme').attr('href') === '/css/themes/light.css' ||
+  $('#usertheme').attr('href') === '/css/themes/bootstrap-theme.min.css'){
+    $("<link/>", {rel: "stylesheet", href: "http://twirlie.net/dd/cytube/current/themes/light-bootstrap.css"})
+      .appendTo($("head"));
+} else if ($('#usertheme').attr('href') === '/css/themes/slate.css' ||
+  $('#usertheme').attr('href') === '/css/themes/cyborg.css') {
+    $("<link/>", {rel: "stylesheet", href: "http://twirlie.net/dd/cytube/current/themes/userlist.css"})
+	  .appendTo($("head"));
+}
+
 //make a well for the playlist controls
 
 $('.plcontrol-collapse').addClass('well');
@@ -46,3 +73,4 @@ $('#resizewrap').append(
 "thub.com/mikumonday/cytube-scripts' target='_blank'>github</a></span></div></div>"
 //lel huge string xdxdxdxdxd
 );
+

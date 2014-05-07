@@ -23,21 +23,6 @@ to dark, before required refresh. */
     color:teal;
 }
 
-.userlist_owner {
-    color: SeaGreen !important;
-    font-weight:normal !important;
-}
-
-.userlist_op {
-    color: SeaGreen !important;
-    font-weight:normal !important;
-}
-
-.userlist_item {
-    color:SeaGreen !important;
-    font-weight:normal;
-}
-
 .profile-image {
     width: 150px;
     height: 150px;
@@ -45,7 +30,6 @@ to dark, before required refresh. */
 
 .profile-box {
     max-width: 162px;
-    color: black;
 }
 
 /* MOTD styles */

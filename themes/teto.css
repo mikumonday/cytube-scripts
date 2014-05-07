@@ -1,0 +1,50 @@
+body {
+    background: url(https://dl.dropboxusercontent.com/u/65223300/mmPictureSHow/tetostripes.png) LightPink repeat-y fixed;
+}
+
+a {
+  color: DeepPink;
+}
+
+#ytapiplayer {
+    background-color: #000000;
+}
+
+#chatheader, #currenttitle, #userlist, #messagebuffer, #plmeta {
+    background-color: #ffffff;
+}
+
+footer {
+    background-color: #eeeeee !important;
+}
+
+.queue_entry {
+    background-color: #ffffff;
+}
+
+.queue_active {
+    background-color: #d9edf7;
+}
+
+.profile-box, .user-dropdown {
+    background-color: #ffffff;
+}
+
+.well {
+  background-color: white;
+}
+
+.userlist_owner {
+    color: Pink !important;
+    font-weight:normal !important;
+}
+
+.userlist_op {
+    color: Pink !important;
+    font-weight:normal !important;
+}
+
+.userlist_item {
+    color: Pink !important;
+    font-weight:normal;
+}

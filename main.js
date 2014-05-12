@@ -1,15 +1,11 @@
 /*global $, jQuery, socket*/
 /*jslint maxlen: 120 */
 
-<<<<<<< HEAD
-=======
 var themes = [
   {'link': 'http://twirlie.net/dd/cytube/current/themes/mikumonday.css', 'name': 'Miku Monday'},
   {'link': 'http://twirlie.net/dd/cytube/current/themes/teto.css', 'name': 'Teto'}
 ];
 
-
->>>>>>> fc963f1302fcb9c15e650414a456e728e0793845
 //non temp
 $(".add-temp").attr('checked', false);
 

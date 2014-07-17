@@ -1,11 +1,11 @@
 /* requires JQuery */
 /* Functions that can be used for liking a Vocadb Song using CORS
-  Bind checkVdbLike to a button, and add callbacks (visual cue/tooltip messages)
+  Bind checkVdbLike to a button, and visual cue/tooltip messages
   to results */
   
-function checkVdbLike(songId) {
+function TryVdbLike(songId) {
     //Send GET request to URL to check whether the song is already liked/favorited
-    // to avoid overwriting user preference
+    // to avoid overwriting user preference. If there is no rating, it will like the song.
     var userVdbSongPreference = $.ajax({
         type: "GET",
         url: "http://vocadb.net/api/users/current/ratedSongs/" + songId,
@@ -25,23 +25,24 @@ function checkVdbLike(songId) {
     });
 }
 
-function processVdbLike(likeness, songId) { //'Like', 'Favorite', 'Nothing'
-    // Process results of checkVdbLike. Only send a like if the rating is 'Nothing'
-    console.log(likeness);
-    if (likeness === "Nothing") {
+function processVdbLike(pref, songId) { //'Like', 'Favorite', 'Nothing'
+    console.log(pref);
+    if (pref === "Nothing") {
         console.log(songId + " No rating; let's like!");
         likeVdbSong(songId);
-    } else if (likeness == "Like") {
+    } else if (pref == "Like") {
         console.log("already liked!");
-    } else if (likeness == "Favorite") {
+    } else if (pref == "Favorite") {
         console.log("This is favorited!");
     }
 };
 
+// Don't use this directly because it can overwrite a favorite
 function likeVdbSong(songId) {
     console.log("Liking song " + songId);
     $.ajax({
-        url: 'http://vocadb.net/api/users/current/ratedSongs/' + songId + '?rating=Like',
+        type: "POST",
+        url: "http://vocadb.net/api/users/current/ratedSongs/' + songId + '?rating=Like",
         xhrFields: {
             withCredentials: true
         },
